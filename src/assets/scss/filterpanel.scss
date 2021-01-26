@@ -1,0 +1,121 @@
+.aside-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #ffffff;
+  width: 676px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08);
+  height: 93vh;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #eee;
+
+  .filters {
+    width: 344px;
+    flex: 1;
+    padding: 32px 16px;
+
+    h6 {
+      font-size: 18px;
+    }
+
+    .filter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .filter-type {
+      margin-top: 30px;
+
+      span {
+        display: block;
+        margin-bottom: 5px;
+        color: #333333;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
+      }
+
+      .values {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 4px;
+        border: 1px solid #eeeeee;
+        margin-bottom: 12px;
+
+        .button {
+          padding: 12px 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: auto;
+          color: #666666;
+          font-size: 12px;
+          font-family: 'Inter', sans-serif;
+
+          &:not(:last-child) {
+            border-right: 1px solid #eeeeee;
+          }
+
+          &.selected {
+            border: 1px solid #008BDC;
+            background: #EAFCFF;
+          }
+        }
+      }
+    }
+  }
+
+  select {
+    border: 1px solid #eee;
+    background: #fff;
+    width: 100%;
+    color: #333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px;
+    box-sizing: content-box;
+  }
+
+  .apply-filters {
+    padding: 32px 16px;
+    border-top: 2px solid #eeeeee;
+    display: flex;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 33px;
+      border-radius: 4px;
+      margin-right: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 16px;
+
+      &:first-child {
+        border: 1px solid #00A5EC;
+        color: #00A5EC;
+      }
+
+      &:last-child {
+        background-color: #00a5ec;
+        color: #ffffff;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1255px) {
+    width: 360px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+  }
+}
